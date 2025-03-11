@@ -1,4 +1,5 @@
 import Header from "@/components/Header";
+import { Toaster } from "@/components/ui/sonner";
 import { ReactNode } from "react";
 
 const Layout = ({ children }: { children: ReactNode }) => {
@@ -6,7 +7,10 @@ const Layout = ({ children }: { children: ReactNode }) => {
     <main className="root-container">
       <div className="mx-auto max-w-7xl">
         <Header />
-        <div className="mt-20 pb-20">{children}</div>
+        <div className="mt-20 pb-20">
+          {children}
+          <Toaster />
+        </div>
       </div>
     </main>
   );
